@@ -58,11 +58,12 @@ export default function Home() {
     });
 
     split.lines.forEach((line) => {
-      gsap.from(line, {
+      gsap.set(line, {opacity: 0, y: 50})
+      gsap.to(line, {
         ease: 'Power3.easeOut',
         duration: 3,
-        y: 50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: line,
           start: 'top 90%',
@@ -72,12 +73,13 @@ export default function Home() {
     });
 
     smallSplit.lines.forEach((smallLine) => {
-      gsap.from(smallLine, {
+      gsap.set(smallLine, {opacity: 0, y: 50})
+      gsap.to(smallLine, {
         ease: 'Power3.easeOut',
         delay: 0.5,
         duration: 3,
-        y: 50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: smallLine,
           start: 'top 90%',
@@ -88,12 +90,13 @@ export default function Home() {
 
     var scrollService = gsap.utils.toArray('.service');
     scrollService.forEach((service) => {
-      gsap.from(service, {
+      gsap.set(service, {opacity: 0, y: 50})
+      gsap.to(service, {
         ease: 'Power3.easeOut',
         delay: 0.5,
         duration: 3,
-        y: 50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: service,
           start: "top 90%",
@@ -104,12 +107,13 @@ export default function Home() {
 
     var scrollEl = gsap.utils.toArray('.reference');
     scrollEl.forEach((scroll) => {
-      gsap.from(scroll, {
+      gsap.set(scroll, {opacity: 0, y: 50})
+      gsap.to(scroll, {
         ease: 'Power3.easeOut',
         delay: 0.5,
         duration: 3,
-        y: 50,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: scroll,
           start: "top 90%",
@@ -123,6 +127,7 @@ export default function Home() {
     <>
       <section className={css.heroWrapper}>
         <div className={css.nameWrapper}><span className={css.name}  ref={ref}>Growup Studio</span></div>
+        <div className={css.planeWrapper} ref={planeRef}><AnimatedImage /></div>
         <div className={css.whatWeDo}>Branding + Webdesign</div>
       </section>
       <section className={css.subHero} ref={subheroRef}>

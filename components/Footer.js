@@ -11,9 +11,10 @@ export default function Footer() {
   useEffect(() => {
     var scrollEl = gsap.utils.toArray('.item');
     scrollEl.forEach((scroll) => {
-      gsap.from(scroll, {
-        y: 25,
-        opacity: 0,
+      gsap.set(scroll, {opacity: 0, y: 25})
+      gsap.to(scroll, {
+        y: 0,
+        opacity: 1,
         scrollTrigger: {
           trigger: scroll,
           start: "top 90%",
