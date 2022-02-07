@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-export default function() {
+export default function Footer() {
   const footerRef = useRef(null);
 
   useEffect(() => {
