@@ -1,0 +1,105 @@
+@import 'sizes.scss';
+
+.header {
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 99;
+}
+
+.logoWrapper {
+  left: 3vw;
+  position: fixed;
+  top: 3vw;
+  opacity: 0;
+}
+
+.logoWrapper span {
+  display: block;
+  line-height: 1;
+}
+
+.logoInner {
+  transition: all 1s var(--ease);
+  transition-property: opacity, transform;
+  transform: translateY(0);
+}
+
+.hideLogo {
+  transform: translateY(-50px);
+  transition: all 1s var(--ease);
+  opacity: 0;
+}
+
+.menuButton {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+
+  &::before {
+    background-color: var(--white);
+    border-radius: 4px;
+    content: '';
+    height: 8px;
+    margin-right: 0.5rem;
+    width: 8px;
+  }
+}
+
+.socialsWrapper {
+  bottom: 3vw;
+  left: 3vw;
+  position: fixed;
+}
+
+.socialsLink {
+  color: var(--white);
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0;
+  transition: all 1s var(--ease);
+  transition-property: opacity, transform;
+  transform: translateY(0);
+
+  li a {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  span:first-of-type {
+    margin-right: 0.25rem;
+  }
+}
+
+.hideSocials {
+  transform: translateY(50px);
+  transition: all 1s var(--ease);
+  opacity: 0;
+}
+
+.contactWrapper {
+  bottom: 3vw;
+  right: 3vw;
+  position: fixed;
+}
+
+.contact {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  transition: all 1s var(--ease);
+  transition-property: opacity, transform;
+  transform: translateY(0);
+
+  span:first-of-type {
+    margin-right: 0.25rem;
+  }
+}
+
+.hideContact {
+  transform: translateY(50px);
+  transition: all 1s var(--ease);
+  opacity: 0;
+}
