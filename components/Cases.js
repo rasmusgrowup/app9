@@ -13,10 +13,26 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 export default function Cases() {
   const casesRef = useRef(null);
+  const title = useRef(null);
 
   useEffect(() => {
     const vh = (coef) => window.innerHeight * (coef/100);
     const vw = (coef) => window.innerWidth * (coef/100);
+
+    gsap.set(title.current, {opacity: 0, y: 50})
+    gsap.to(title.current, {
+      ease: 'Power3.easeOut',
+      delay: 0.5,
+      duration: 3,
+      y: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: title.current,
+        start: '-=50 ' + vh(90),
+        end: 'center center',
+        scrub: true
+      }
+    });
 
     var scrollEl = gsap.utils.toArray('.case');
     scrollEl.forEach((scroll) => {
@@ -40,6 +56,7 @@ export default function Cases() {
   return (
     <>
       <section className={css.cases}>
+        <h2 className={css.title} ref={title}>Udvalgte cases</h2>
         <div className={`${css.row} ${css.first}`}>
           <Link href='/'>
             <a className={`${css.case} ${css.wide} case`}>

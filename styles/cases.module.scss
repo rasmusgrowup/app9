@@ -9,6 +9,11 @@
   }
 }
 
+.title {
+  font-size: max(3vw, 30px);
+  text-transform: uppercase;
+}
+
 .row {
   display: flex;
   flex-direction: column;

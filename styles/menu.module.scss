@@ -19,8 +19,14 @@
     padding: 0;
   }
 
+  .contact a {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
   a:hover {
-    color: var(--red)
+    color: var(--red);
   }
 }
 
@@ -53,19 +59,16 @@
 .moreList li {
   font-size: 1.4em;
   font-weight: bold;
-
 }
 
 .contact {
   margin-top: 2rem;
 
-  a {
-    display: block;
-    font-size: 1.25em;
-    font-weight: bold;
-  }
-
   .mail {
     text-decoration: underline;
   }
+}
+
+.active {
+  color: var(--red);
 }

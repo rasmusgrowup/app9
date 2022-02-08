@@ -27,7 +27,6 @@
   font-weight: bold;
   left: 50%;
   line-height: 1;
-  //mix-blend-mode: difference;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -53,7 +52,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 
   @media (min-width: $l) {
     height: 62vw;

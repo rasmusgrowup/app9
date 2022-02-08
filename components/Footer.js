@@ -1,5 +1,5 @@
 import Link from 'next/link'
-
+import React from 'react'
 import css from '../styles/footer.module.scss'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -37,6 +37,9 @@ export default function Footer() {
         <ul className={css.list}>
           <li className='item'><Link href='tel:+4531623733'><a>+45 31 62 37 33</a></Link></li>
           <li className='item'><Link href='mailto:hello@growupstudio.dk'><a className={css.mail}>hello@growupstudio.dk</a></Link></li>
+          <li className={`${css.address} item`}>Havnegade 100L, Odense C</li>
+          <li className={`${css.copyright} item`}>©{new Date().getFullYear()} Growup Aps</li>
+          <li className={`${css.cvr} item`}>CVR 39852640</li>
         </ul>
       </footer>
     </>

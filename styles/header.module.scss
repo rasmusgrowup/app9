@@ -1,7 +1,6 @@
 @import 'sizes.scss';
 
 .header {
-  mix-blend-mode: difference;
   position: relative;
   z-index: 99;
 }
@@ -10,7 +9,6 @@
   left: 3vw;
   position: fixed;
   top: 3vw;
-  opacity: 0;
 }
 
 .logoWrapper span {
@@ -37,7 +35,6 @@
   position: fixed;
   top: 3vw;
   right: 3vw;
-  opacity: 0;
 
   &::before {
     background-color: var(--white);
@@ -53,7 +50,6 @@
   bottom: 3vw;
   left: 3vw;
   position: fixed;
-  opacity: 0;
 }
 
 .socialsLink {
@@ -85,7 +81,6 @@
   bottom: 3vw;
   right: 3vw;
   position: fixed;
-  opacity: 0;
 }
 
 .contact {

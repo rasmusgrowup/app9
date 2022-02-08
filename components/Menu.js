@@ -1,10 +1,12 @@
 import css from '../styles/menu.module.scss'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { MenuContext } from "../hooks/menuContext";
 import React, { useContext, useEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 
 export default function Menu() {
+  const router = useRouter();
   const drawerRef = useRef(null);
   const { toggle, toggleFunction} = useContext(MenuContext);
   const tl = useRef();
@@ -45,7 +47,7 @@ export default function Menu() {
         <ul className={css.moreList}>
           <li><Link href='/'><a>Opslagstavlen</a></Link></li>
           <li><Link href='/'><a>Vores cases</a></Link></li>
-          <li><Link href='/'><a>Forsiden</a></Link></li>
+          <li className={`${router.pathname == '/' ? `${css.active}` : ''}`}><Link href='/'><a>Forsiden</a></Link></li>
         </ul>
         <div className={css.contact}>
           <Link href='tel:+4531623733'><a>+45 31 62 37 33</a></Link>
