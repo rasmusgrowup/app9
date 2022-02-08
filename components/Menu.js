@@ -15,6 +15,7 @@ export default function Menu() {
       .to(drawerRef.current, {
         xPercent: -100,
         duration: 0.5,
+        opacity: 1,
         ease: 'Power3.easeInOut'
       })
   }, [])

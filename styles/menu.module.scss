@@ -3,13 +3,14 @@
 .drawer {
   background-color: var(--dark);
   height: 100%;
-  width: 320px;
+  opacity: 0;
   padding: 6vw 3vw;
   position: fixed;
   right: -320px;
   text-align: right;
   transform: translateX(0%);
   z-index: 100;
+  width: 320px;
 
   .servicesList,
   .moreList {
