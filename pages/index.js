@@ -130,6 +130,7 @@ export default function Home() {
     <>
       <section className={css.heroWrapper} ref={heroRef}>
         <div className={css.nameWrapper}><span className={css.name}  ref={nameRef}>Growup Studio</span></div>
+        <div className={css.planeWrapper} ref={planeRef}><AnimatedImage /></div>
         <div className={css.whatWeDo}>Branding + Webdesign</div>
       </section>
       <section className={css.subHero} ref={subheroRef}>
