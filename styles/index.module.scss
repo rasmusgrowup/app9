@@ -1,12 +1,24 @@
 @import 'sizes.scss';
 
 .heroWrapper {
-  height: 89vh;
+  height: 90vh;
   position: relative;
   width: 100%;
 
-  @media (min-width: $xl) {
-    height: 100vh;
+  @media (min-width: $l) {
+    height: 62vw;
+  }
+
+  &::after {
+    bottom: 0;
+    border-bottom: 1px solid var(--red);
+    display: none;
+    content: '';
+    left: 0;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
   }
 }
 
@@ -15,7 +27,7 @@
   font-weight: bold;
   left: 50%;
   line-height: 1;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -25,7 +37,7 @@
   width: 100%;
   z-index: 2;
 
-  @media (min-width: $xl) {
+  @media (min-width: $l) {
     font-size: 8vw;
   }
 }
@@ -36,15 +48,15 @@
 }
 
 .planeWrapper {
-  height: 89vh;
+  height: 90vh;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
 
-  @media (min-width: $xl) {
-    height: 100vh;
+  @media (min-width: $l) {
+    height: 62vw;
   }
 }
 
@@ -84,7 +96,7 @@
 
     @media (min-width: $xl) {
       line-height: 0.8;
-      width: 80%;
+      width: 82%;
     }
   }
 }

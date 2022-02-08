@@ -1,0 +1,96 @@
+@import 'sizes.scss';
+
+.cases {
+  margin: 6rem auto 0;
+
+  @media (min-width: $xl) {
+    margin: 12rem auto;
+    max-width: 88vw;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $l) {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12vw;
+  }
+
+  .wide {
+    flex: 3;
+  }
+
+  .tall {
+    flex: 2;
+  }
+}
+
+.first .wide,
+.second .tall {
+  margin-right: 12vw;
+}
+
+@media (max-width: $l) {
+  .case {
+    display: block;
+    margin-bottom: 6rem;
+  }
+
+  .first {
+    .wide {
+      margin-right: 15vw;
+    }
+
+    .tall {
+      margin-left: 25vw;
+    }
+  }
+
+  .second {
+    flex-direction: column-reverse;
+
+    .wide {
+      margin-right: 15vw;
+    }
+
+    .tall {
+      margin-left: 25vw;
+      margin-right: 0;
+    }
+  }
+}
+
+.info {
+  align-items: flex-start;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  p,
+  span {
+    align-items: flex-start;
+    display: flex;
+    line-height: 1;
+    margin: 0;
+  }
+
+  span {
+    font-size: 1.25em;
+  }
+}
+
+.info p::before {
+  background-color: var(--white);
+  border-radius: 4px;
+  content: '';
+  display: block;
+  height: 8px;
+  margin-right: 2rem;
+  margin-top: 4px;
+  width: 8px;
+}

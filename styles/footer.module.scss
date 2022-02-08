@@ -1,12 +1,10 @@
 @import 'sizes.scss';
 
 .main {
-  margin: 0 auto;
-  padding: 0 0 12rem;
+  margin: 6rem auto 12rem;
   position: relative;
 
   @media (min-width: $xl) {
-    padding: 6rem 0 12rem;
     max-width: 88vw;
   }
 

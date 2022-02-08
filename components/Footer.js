@@ -9,16 +9,20 @@ export default function Footer() {
   const footerRef = useRef(null);
 
   useEffect(() => {
+    const vh = (coef) => window.innerHeight * (coef/100);
+    const vw = (coef) => window.innerWidth * (coef/100);
+
     var scrollEl = gsap.utils.toArray('.item');
     scrollEl.forEach((scroll) => {
       gsap.set(scroll, {opacity: 0, y: 25})
       gsap.to(scroll, {
         y: 0,
         opacity: 1,
+        ease: 'Power3.easeOut',
         scrollTrigger: {
           trigger: scroll,
-          start: "top 90%",
-          end: 'bottom bottom',
+          start: '-=50 ' + vh(90),
+          end: 'bottom ' + vh(90),
           endTrigger: footerRef.current,
           scrub: true
         }
