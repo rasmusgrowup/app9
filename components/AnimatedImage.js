@@ -80,7 +80,7 @@ function BasicPlane() {
         heightSegments={9}
         onRender={onRender}
       >
-          <img src="/Udsnit_Organic.jpg" alt="" data-sampler="planeTexture" crossOrigin='anonymous'/>
+          <img src="/Udsnit_ByMickleit.jpg" alt="" data-sampler="planeTexture" crossOrigin='anonymous'/>
       </Plane>
     </Curtains>
   );

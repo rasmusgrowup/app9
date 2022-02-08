@@ -135,10 +135,10 @@ export default function Home() {
       </section>
       <section className={css.subHero} ref={subheroRef}>
         <h1 className={css.lines} ref={linesRef}>
-          Vi er et ungt nærværende designteam med kontor i hjertet <span className='ivyPrestoItalic'>af Odense</span>
+          Vi er et lille nærværende designteam med kontor i hjertet <span className='ivyPrestoItalic'>af Odense</span>
         </h1>
         <div className={css.subHeroText}>
-          <p className={css.pLines} ref={smallLinesRef}>Foruden at levere responsive og søgemaskineoptimerede hjemmesider og netbutikker, udvikler vi unikke visuelle identiteter, skaber spændende billede- og videoindhold, og opfindsom kommunikation.<br/><br/>Inspirationen til vores visuelle aftryk skal findes i mode- og møbelbranchen</p>
+          <p className={css.pLines} ref={smallLinesRef}>Vi hjælper start ups og etablerede virksomheder med deres branding, hjemmesider, netbutikker og sociale medier. Vi gør os umage i vores daglige arbejde, så vores kunder kan læne sig tilbage, og vide, at de er i trygge hænder.<br/><br/>Foruden at levere responsive og professionelle hjemmesider og netbutikker, udvikler vi unikke visuelle identiteter, skaber spændende billede- og videomaterialer, og opfindsom kommunikation.</p>
         </div>
       </section>
       <Cases />
@@ -154,7 +154,7 @@ export default function Home() {
         </ul>
       </section>
       <section className={css.references} ref={referencesRef}>
-        <h2 className='reference'>Vi har leveret til flg. klienter</h2>
+        <h2 className='reference'>Vi leverer til flg. klienter</h2>
         <ul className={css.list}>
           {references.map(({title, year}) => (
               <li className={`${css.client} reference`} key={title}><div className={css.clientTitle}>{title}</div><span className={css.year}>{year}</span></li>

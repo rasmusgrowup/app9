@@ -91,19 +91,20 @@
   .lines {
     font-size: max(7.5vw, 48px);
     line-height: 0.9;
-    margin-bottom: 8vw;
+    margin-bottom: 15vw;
     text-transform: uppercase;
 
     @media (min-width: $xl) {
       line-height: 0.8;
+      margin-bottom: 9vw;
       width: 82%;
     }
   }
 }
 
 .subHeroText {
-  font-size: 1em;
-  line-height: 1.4;
+  font-size: 1.1em;
+  line-height: 1.5;
   max-width: 520px;
   text-transform: uppercase;
 
