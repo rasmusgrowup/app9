@@ -29,8 +29,8 @@ export default function Home() {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       gsap.set(nameRef.current, { opacity: 1, yPercent: 100 })
       gsap.set(planeRef.current, { opacity: 0 })
-      gsap.to(nameRef.current, {yPercent: 0, delay: 1.5, duration: 2, ease: 'Power3.easeInOut' })
-      gsap.to(planeRef.current, {opacity: 1, delay: 0.1, duration: 2, ease: 'Power3.easeInOut' })
+      gsap.to(nameRef.current, {yPercent: 0, delay: 0.1, duration: 2, ease: 'Power3.easeInOut' })
+      gsap.to(planeRef.current, {opacity: 1, delay: 1.5, duration: 2, ease: 'Power3.easeInOut' })
     } else {
       gsap.set(nameRef.current, { yPercent: 0, opacity: 1 })
       gsap.set(planeRef.current, { opacity: 1 })
