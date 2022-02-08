@@ -38,8 +38,6 @@ export default function Layout({ children }) {
       </header>
       <Menu />
       <main className='main'>
-        <CustomView condition={!isMobile}>
-        </CustomView>
         {children}
         <Footer />
       </main>

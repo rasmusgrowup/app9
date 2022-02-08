@@ -52,12 +52,12 @@ export default function Home() {
 
     const split = new SplitText(linesRef.current, {
       type: 'lines',
-      linesClass: 'line',
+      linesClass: `${css.line}`,
     });
 
     const smallSplit = new SplitText(smallLinesRef.current, {
       type: 'lines',
-      linesClass: 'line',
+      linesClass: `${css.line}`,
     });
 
     split.lines.forEach((line) => {
