@@ -1,10 +1,11 @@
 import css from '../styles/header.module.scss'
-
-import { useEffect, useRef } from 'react'
+import { MenuContext } from "../hooks/menuContext";
+import React, { useEffect, useRef, useContext } from 'react'
 import { gsap } from 'gsap';
 
 export default function MenuButton() {
   const ref= useRef(null);
+  const { toggle, toggleFunction} = useContext(MenuContext);
 
   useEffect (() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
@@ -17,7 +18,7 @@ export default function MenuButton() {
 
   return (
     <>
-      <div className={css.menuButton} ref={ref}>Menu</div>
+      <div className={css.menuButton} ref={ref} onClick={toggleFunction}>Menu</div>
     </>
   )
 }

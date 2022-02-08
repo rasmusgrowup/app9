@@ -2,12 +2,15 @@ import '../styles/globals.css'
 import 'splitting/dist/splitting.css';
 import 'splitting/dist/splitting-cells.css';
 import Layout from '../components/Layout'
+import { MenuProvider } from "../hooks/menuContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <MenuProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </MenuProvider>
   )
 }
 

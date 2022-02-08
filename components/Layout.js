@@ -2,6 +2,7 @@ import Logo from '../components/Logo'
 import MenuButton from '../components/MenuButton'
 import Socials from '../components/Socials'
 import Contact from '../components/Contact'
+import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
 import headerStyles from '../styles/header.module.scss'
@@ -23,6 +24,7 @@ export default function Layout({ children }) {
         <Socials />
         <Contact />
       </header>
+      <Menu />
       <main className='main'>
         <CustomView condition={!isMobile}>
         </CustomView>

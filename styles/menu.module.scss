@@ -1,0 +1,70 @@
+@import 'sizes.scss';
+
+.drawer {
+  background-color: var(--dark);
+  height: 100%;
+  width: 320px;
+  padding: 6vw 3vw;
+  position: fixed;
+  right: -320px;
+  text-align: right;
+  transform: translateX(0%);
+  z-index: 100;
+
+  .servicesList,
+  .moreList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a:hover {
+    color: var(--red)
+  }
+}
+
+.menuButton {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+  opacity: 1;
+
+  &::before {
+    background-color: var(--white);
+    border-radius: 4px;
+    content: '';
+    height: 8px;
+    margin-right: 0.5rem;
+    width: 8px;
+  }
+}
+
+.title {
+  display: block;
+  font-size: 0.85em;
+  margin-top: 3rem;
+}
+
+.servicesList li,
+.moreList li {
+  font-size: 1.4em;
+  font-weight: bold;
+
+}
+
+.contact {
+  margin-top: 2rem;
+
+  a {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .mail {
+    text-decoration: underline;
+  }
+}
