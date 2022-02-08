@@ -135,7 +135,8 @@ export default function Home() {
       </section>
       <section className={css.subHero} ref={subheroRef}>
         <h1 className={css.lines} ref={linesRef}>
-          Vi er et lille nærværende designteam med kontor i hjertet <span className={css.ivyPrestoItalic}>af Odense</span>
+          Vi er et lille nærværende designteam med kontor i hjertet
+          <span className={css.ivyPrestoItalic}>af Odense</span>
         </h1>
         <div className={css.subHeroText}>
           <p className={css.pLines} ref={smallLinesRef}>Vi hjælper start ups og etablerede virksomheder med deres branding, hjemmesider, netbutikker og sociale medier. Vi gør os umage i vores daglige arbejde, så vores kunder kan læne sig tilbage, og vide, at de er i trygge hænder.<br/><br/>Foruden at levere responsive og professionelle hjemmesider og netbutikker, udvikler vi unikke visuelle identiteter, skaber spændende billede- og videomaterialer, og opfindsom kommunikation.</p>
