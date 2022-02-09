@@ -28,6 +28,7 @@
   left: 50%;
   line-height: 1;
   overflow: hidden;
+  mix-blend-mode: difference;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -44,6 +45,16 @@
 .name {
   display: block;
   opacity: 0;
+}
+
+.videoWrapper {
+  height: 40vw;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  z-index: 1;
 }
 
 .planeWrapper {
@@ -75,114 +86,5 @@
   @media (min-width: $xl) {
     font-size: 1.1em;
     transform: translateY(20vw);
-  }
-}
-
-.subHero {
-  margin: 0 auto;
-  position: relative;
-
-  @media (min-width: $xl) {
-    margin: 0 auto 4rem;
-    max-width: 88vw;
-  }
-
-  .lines {
-    font-size: max(7.4vw, 48px);
-    line-height: 0.9;
-    margin-bottom: 15vw;
-    text-transform: uppercase;
-
-    @media (min-width: $xl) {
-      line-height: 0.8;
-      margin-bottom: 9vw;
-      width: 80%;
-    }
-
-    .ivyPrestoItalic {
-      font-family: ivypresto-display, serif;
-      font-style: italic;
-      font-weight: 400;
-      letter-spacing: normal;
-      padding-left: 0.25rem;
-    }
-  }
-
-  .line {
-    opacity: 0;
-  }
-}
-
-.subHeroText {
-  font-size: 1.1em;
-  line-height: 1.5;
-  max-width: 520px;
-  text-transform: uppercase;
-
-  @media (min-width: $xl) {
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin-left: auto;
-    margin-right: 0;
-  }
-}
-
-.services,
-.references {
-  margin: 6rem auto;
-  position: relative;
-
-  @media (min-width: $xl) {
-    max-width: 88vw;
-  }
-
-  h2 {
-    font-weight: normal;
-    font-size: 1.1em;
-
-    @media (min-width: $xl) {
-      font-size: 1.2em;
-    }
-  }
-
-  .list {
-    list-style-type: none;
-    font-size: 1.75em;
-    font-weight: bold;
-    line-height: 0.9;
-    margin: 1rem 0;
-    padding: 0;
-
-    @media (min-width: $xl) {
-      font-size: 5em;
-    }
-
-    li a {
-      align-items: flex-start;
-      display: flex;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-
-      span {
-        margin-right: 0.25rem;
-      }
-    }
-  }
-}
-
-.services a:hover {
-  color: var(--red)
-}
-
-.client {
-  align-items: flex-start;
-  display: flex;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-
-  .year {
-    font-size: 0.3em;
-    font-weight: normal;
-    margin-left: 0.5rem;
   }
 }

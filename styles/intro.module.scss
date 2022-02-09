@@ -1,0 +1,50 @@
+@import 'sizes.scss';
+
+.subHero {
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $xl) {
+    margin: 0 auto 4rem;
+    max-width: 88vw;
+  }
+
+  .lines {
+    font-size: max(7.4vw, 48px);
+    line-height: 0.9;
+    margin-bottom: 15vw;
+    text-transform: uppercase;
+
+    @media (min-width: $xl) {
+      line-height: 0.8;
+      margin-bottom: 9vw;
+      width: 80%;
+    }
+
+    .ivyPrestoItalic {
+      font-family: ivypresto-display, serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: normal;
+      padding-left: 0.25rem;
+    }
+  }
+
+  .line {
+    opacity: 0;
+  }
+}
+
+.subHeroText {
+  font-size: 1.1em;
+  line-height: 1.5;
+  max-width: 520px;
+  text-transform: uppercase;
+
+  @media (min-width: $xl) {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}

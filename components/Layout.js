@@ -20,7 +20,9 @@ export default function Layout({ children }) {
     } else {
       setScrollDown(false)
     }
-  }, [scroll.y, scroll.lastY]);
+
+    console.log(scrollDown)
+  }, [scroll.y]);
 
   useEffect (() => {
       if (window.sessionStorage.getItem("firstLoadDone") === null) {
@@ -36,7 +38,7 @@ export default function Layout({ children }) {
         <Socials down={scrollDown}/>
         <Contact down={scrollDown}/>
       </header>
-      <Menu />
+      <Menu/>
       <main className='main'>
         {children}
         <Footer />
