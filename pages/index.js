@@ -26,7 +26,8 @@ export default function Home() {
       gsap.to(planeRef.current, {opacity: 1, delay: 1.5, duration: 2, ease: 'Power3.easeInOut' })
     } else {
       gsap.set(nameRef.current, { yPercent: 0, opacity: 1 })
-      gsap.set(planeRef.current, { opacity: 1 })
+      gsap.set(planeRef.current, { opacity: 0 })
+      gsap.to(planeRef.current, {opacity: 1, delay: 0, duration: 2, ease: 'Power3.easeInOut' })
     }
   }, [])
 

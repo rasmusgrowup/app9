@@ -24,7 +24,7 @@
   transform: translateY(0);
 }
 
-.hideLogo {
+.logoInner.hideOnScroll {
   transform: translateY(-50px);
   transition: all 1s var(--ease);
   opacity: 0;
@@ -75,7 +75,7 @@
   }
 }
 
-.hideSocials {
+.socialsLink.hideOnScroll {
   transform: translateY(50px);
   transition: all 1s var(--ease);
   opacity: 0;
@@ -101,7 +101,7 @@
   }
 }
 
-.hideContact {
+.contact.hideOnScroll {
   transform: translateY(50px);
   transition: all 1s var(--ease);
   opacity: 0;
