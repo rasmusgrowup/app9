@@ -60,7 +60,7 @@ export default function Cases() {
         <div className={`${css.row} ${css.first}`}>
           <Link href='/'>
             <a className={`${css.case} ${css.wide} case`}>
-              <div className={css.image}><Image src={Daniel} layout='responsive' objectFit='cover' objectPosition='center'/></div>
+              <div className={css.image}><Image src={Daniel} layout='responsive' objectFit='cover' objectPosition='center' alt='Daniel Wagner'/></div>
               <div className={css.info}>
                 <p>
                   Branding + <br />
@@ -72,7 +72,7 @@ export default function Cases() {
           </Link>
           <Link href='/'>
             <a className={`${css.case} ${css.tall} case`}>
-              <div className={css.image}><Image src={TwelveInch} layout='responsive' objectFit='cover' objectPosition='center'/></div>
+              <div className={css.image}><Image src={TwelveInch} layout='responsive' objectFit='cover' objectPosition='center' alt='Twelve Inch'/></div>
               <div className={css.info}>
                 <p>
                   Art Direction + <br />
@@ -86,7 +86,7 @@ export default function Cases() {
         <div className={`${css.row} ${css.second}`}>
           <Link href='/'>
             <a className={`${css.case} ${css.tall} case`}>
-              <div className={css.image}><Image src={Organic} layout='responsive' objectFit='cover' objectPosition='center'/></div>
+              <div className={css.image}><Image src={Organic} layout='responsive' objectFit='cover' objectPosition='center' alt='The Organic Crave Company'/></div>
               <div className={css.info}>
                 <p>
                   Art Direction + <br />
@@ -98,7 +98,7 @@ export default function Cases() {
           </Link>
           <Link href='/'>
             <a className={`${css.case} ${css.wide} case`}>
-              <div className={css.image}><Image src={Pral} layout='responsive' objectFit='cover' objectPosition='center'/></div>
+              <div className={css.image}><Image src={Pral} layout='responsive' objectFit='cover' objectPosition='center' alt='Pral'/></div>
               <div className={css.info}>
                 <p>
                   Shopify Webshop

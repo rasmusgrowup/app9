@@ -39,12 +39,12 @@ export default function Services() {
       <section className={css.services} ref={serviceRef}>
         <h2 className='service'>Vi leverer flg. services</h2>
         <ul className={css.list}>
-          <li className='service'><Link href='/'><a><span>Art Direction</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
-          <li className='service'><Link href='/'><a><span>Branding</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
-          <li className='service'><Link href='/'><a><span>Hjemmesider</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
-          <li className='service'><Link href='/'><a><span>Shopify</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
-          <li className='service' style={{ display: 'none' }}><Link href='/'><a><span>SEO</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
-          <li className='service'><Link href='/'><a><span>Visuelt design</span><Image src={Arrow} width='12' height='12' /></a></Link></li>
+          <li className='service'><Link href='/'><a><span>Art Direction</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
+          <li className='service'><Link href='/'><a><span>Branding</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
+          <li className='service'><Link href='/'><a><span>Hjemmesider</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
+          <li className='service'><Link href='/'><a><span>Shopify</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
+          <li className='service' style={{ display: 'none' }}><Link href='/'><a><span>SEO</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
+          <li className='service'><Link href='/'><a><span>Visuelt design</span><Image src={Arrow} width='12' height='12' alt='Arrow icon'/></a></Link></li>
         </ul>
       </section>
     </>

@@ -23,7 +23,7 @@ export default function Contact({ down }) {
       <div className={css.contactWrapper} ref={ref}>
         <ul className={`${css.contact} ${down == true ? `${css.hideContact}` : ''}`} down={down}>
           <span>Kontakt os</span>
-          <Image src={Arrow} />
+          <Image src={Arrow} alt='Arrow icon'/>
         </ul>
       </div>
     </>

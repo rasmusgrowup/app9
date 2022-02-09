@@ -53,22 +53,22 @@ export default function Header() {
       <header className={css.header}>
         <div className={css.logoWrapper} ref={logoRef}>
           <div className={`${css.logoInner} ${navClassList.join(" ")}`}>
-            <span>Growup Studio <Image src={Smile} width='12' height='12' /></span>
+            <span>Growup Studio <Image src={Smile} width='12' height='12' alt='Growup Studio Favicon'/></span>
             <span>Branding + Webdesign</span>
           </div>
         </div>
         <div className={css.menuButton} ref={buttonRef} onClick={toggleFunction}>Menu</div>
         <div className={css.socialsWrapper} ref={socialsRef}>
           <ul className={`${css.socialsLink} ${navClassList.join(" ")}`}>
-            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Behance</span><Image src={Arrow} /></a></Link></li>
-            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Instagram</span><Image src={Arrow} /></a></Link></li>
-            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>LinkedIn</span><Image src={Arrow} /></a></Link></li>
+            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Behance</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
+            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Instagram</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
+            <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>LinkedIn</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
           </ul>
         </div>
         <div className={css.contactWrapper} ref={contactRef}>
           <ul className={`${css.contact} ${navClassList.join(" ")}`}>
             <span>Kontakt os</span>
-            <Image src={Arrow} />
+            <Image src={Arrow} alt='Arrow icon'/>
           </ul>
         </div>
       </header>

@@ -6,7 +6,6 @@ import Intro from '../components/Intro'
 import Cases from '../components/Cases'
 import Services from '../components/Services'
 import References from '../components/References'
-import AnimatedImage from '../components/AnimatedImage'
 
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -57,6 +56,7 @@ export default function Home() {
                 playsInline
                 width='100%'
                 height='100%'
+                alt='Growup Studio showreel'
                 style={{ objectFit: 'cover' }}
                 >
                 <source src={'/OrganicBar.mp4'} type='video/mp4' />

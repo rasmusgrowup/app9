@@ -21,7 +21,7 @@ export default function Logo({ down }) {
     <>
       <div className={css.logoWrapper} ref={ref}>
         <div className={`${css.logoInner} ${down == true ? `${css.hideLogo}` : ''}`} down={down}>
-          <span>Growup Studio <Image src={Smile} width='12' height='12' /></span>
+          <span>Growup Studio <Image src={Smile} width='12' height='12' alt='Growup Studio Favicon'/></span>
           <span>Branding + Webdesign</span>
         </div>
       </div>
