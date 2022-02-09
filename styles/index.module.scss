@@ -9,11 +9,16 @@
     height: 62vw;
   }
 
+  @media (min-width: $xxl) {
+    height: 100vh;
+    max-height: 62vw;
+  }
+
   &::after {
     bottom: 0;
     border-bottom: 1px solid var(--red);
-    display: none;
     content: '';
+    display: none;
     left: 0;
     height: 1px;
     position: absolute;
@@ -48,13 +53,24 @@
 }
 
 .videoWrapper {
-  height: 40vw;
+  height: 52vh;
   left: 50%;
-  position: absolute;
+  position: relative;
+  pointer-events: none;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 30vw;
+  width: 72vw;
   z-index: 1;
+
+  @media (min-width: $s) {
+    height: 62vh;
+    width: 62vw;
+  }
+
+  @media (min-width: $l) {
+    height: 44vw;
+    width: 30vw;
+  }
 }
 
 .planeWrapper {
