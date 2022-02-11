@@ -18,13 +18,13 @@
 }
 
 .basicPlane {
-  height: 52vh;
+  height: 60vh;
   left: 50%;
   position: relative;
   pointer-events: none;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 72vw;
+  width: 78vw;
 
   @media (min-width: $s) {
     height: 62vh;

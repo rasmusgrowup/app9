@@ -4,6 +4,7 @@ import css from '../styles/header.module.scss'
 import Smile from '../public/smile.svg'
 import Arrow from '../public/linkArrow.svg'
 
+import { useRouter } from 'next/router'
 import React, { useEffect, useState, useRef, useContext } from 'react'
 import { gsap } from 'gsap';
 import useScrollListener from '../hooks/useScroll'
@@ -14,6 +15,7 @@ export default function Header() {
   const buttonRef = useRef(null);
   const socialsRef = useRef(null);
   const contactRef = useRef(null);
+  const router = useRouter()
 
   useEffect (() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
@@ -52,25 +54,27 @@ export default function Header() {
     <>
       <header className={css.header}>
         <div className={css.logoWrapper} ref={logoRef}>
-          <div className={`${css.logoInner} ${navClassList.join(" ")}`}>
-            <span>Growup Studio <Image src={Smile} width='12' height='12' alt='Growup Studio Favicon'/></span>
-            <span>Branding + Webdesign</span>
-          </div>
+          <Link href='/'><a>
+            <div className={`${css.logoInner} ${navClassList.join(" ")}`}>
+              <span>Growup Studio <Image src={Smile} width='12' height='12' alt='Growup Studio Favicon'/></span>
+              <span>Branding + Webdesign</span>
+            </div>
+          </a></Link>
         </div>
         <div className={css.menuButton} ref={buttonRef} onClick={toggleFunction}>Menu</div>
-        <div className={css.socialsWrapper} ref={socialsRef}>
+        <div className={css.socialsWrapper} ref={socialsRef} style={{ display: `${ router.pathname != '/' ? 'none' : ''}`}}>
           <ul className={`${css.socialsLink} ${navClassList.join(" ")}`}>
             <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Behance</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
             <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>Instagram</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
             <li><Link href='https://instagram.com/growupstudio.dk'><a target='_blank'><span>LinkedIn</span><Image src={Arrow} alt='Arrow icon'/></a></Link></li>
           </ul>
         </div>
-        <div className={css.contactWrapper} ref={contactRef}>
-          <ul className={`${css.contact} ${navClassList.join(" ")}`}>
-            <span>Kontakt os</span>
-            <Image src={Arrow} alt='Arrow icon'/>
-          </ul>
-        </div>
+          <div className={css.contactWrapper} ref={contactRef} style={{ display: `${ router.pathname != '/' ? 'none' : ''}`}}>
+            <ul className={`${css.contact} ${navClassList.join(" ")}`}>
+              <span>Kontakt os</span>
+              <Image src={Arrow} alt='Arrow icon'/>
+            </ul>
+          </div>
       </header>
     </>
   )

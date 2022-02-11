@@ -1,12 +1,7 @@
 @import 'sizes.scss';
 
 .main {
-  margin: 6rem auto 12rem;
   position: relative;
-
-  @media (min-width: $xl) {
-    max-width: 88vw;
-  }
 
   h2 {
     font-weight: normal;
@@ -15,6 +10,16 @@
     @media (min-width: $xl) {
       font-size: 1.2em;
     }
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 6rem 3vw 12rem;
+
+  @media (min-width: $xl) {
+    max-width: 88vw;
+    padding: 6rem 0 12rem;
   }
 }
 

@@ -70,6 +70,10 @@
     display: flex;
   }
 
+  a:hover {
+    color: var(--red);
+  }
+
   span:first-of-type {
     margin-right: 0.25rem;
   }
@@ -95,6 +99,10 @@
   transition: all 1s var(--ease);
   transition-property: opacity, transform;
   transform: translateY(0);
+
+  span:hover {
+    color: var(--red);
+  }
 
   span:first-of-type {
     margin-right: 0.25rem;

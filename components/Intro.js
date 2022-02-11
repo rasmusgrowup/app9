@@ -1,4 +1,5 @@
 import css from '../styles/intro.module.scss'
+import { useRouter } from 'next/router'
 
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -9,6 +10,7 @@ export default function Intro() {
   const linesRef = useRef(null);
   const smallLinesRef = useRef(null);
   const subheroRef = useRef(null);
+  const router = useRouter();
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -68,7 +70,11 @@ export default function Intro() {
         }
       })
     });
-  }, [])
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    }
+  }, [router])
 
   return (
     <>

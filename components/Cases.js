@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import css from '../styles/cases.module.scss'
 import Daniel from '../public/Daniel_wagner_forward.jpg'
@@ -14,6 +15,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default function Cases() {
   const casesRef = useRef(null);
   const title = useRef(null);
+  const router = useRouter();
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const vh = (coef) => window.innerHeight * (coef/100);
@@ -51,14 +54,18 @@ export default function Cases() {
         }
       });
     });
-  }, [])
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    }
+  }, [router])
 
   return (
     <>
       <section className={css.cases}>
-        <h2 className={css.title} ref={title}>Udvalgte cases</h2>
+        <h2 className={css.title} ref={title} style={{ display: 'none' }}>Udvalgte cases</h2>
         <div className={`${css.row} ${css.first}`}>
-          <Link href='/'>
+          <Link href='/cases/daniel-wagner'>
             <a className={`${css.case} ${css.wide} case`}>
               <div className={css.image}><Image src={Daniel} layout='responsive' objectFit='cover' objectPosition='center' alt='Daniel Wagner'/></div>
               <div className={css.info}>
@@ -70,7 +77,7 @@ export default function Cases() {
               </div>
             </a>
           </Link>
-          <Link href='/'>
+          <Link href='/cases/twelve-inch'>
             <a className={`${css.case} ${css.tall} case`}>
               <div className={css.image}><Image src={TwelveInch} layout='responsive' objectFit='cover' objectPosition='center' alt='Twelve Inch'/></div>
               <div className={css.info}>
@@ -92,7 +99,7 @@ export default function Cases() {
                   Art Direction + <br />
                   Custom Shopify Webshop
                 </p>
-                <span>/ 2</span>
+                <span>/ 3</span>
               </div>
             </a>
           </Link>
@@ -103,7 +110,7 @@ export default function Cases() {
                 <p>
                   Shopify Webshop
                 </p>
-                <span>/ 2</span>
+                <span>/ 4</span>
               </div>
             </a>
           </Link>

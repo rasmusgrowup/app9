@@ -24,8 +24,8 @@ const basicVs = `
 
   void main() {
       vec3 position = aVertexPosition;
-      float x = (cos(position.x * 2.5 + ((uTime * (PI / 3.0)) * 0.03)) + cos(position.y * 2.5 + ((uTime * (PI / 2.489)) * 0.017))) * 0.008;
-      float y = (sin(position.y * 2.5 + ((uTime * (PI / 2.023)) * 0.02)) + sin(position.x * 2.5 + ((uTime * (PI / 3.1254)) * 0.037))) * 0.015;
+      float x = (cos(position.x * 2.5 + ((uTime * (PI / 3.0)) * 0.03)) + cos(position.y * 2.5 + ((uTime * (PI / 2.489)) * 0.017))) * 0.0025;
+      float y = (sin(position.y * 2.5 + ((uTime * (PI / 2.023)) * 0.02)) + sin(position.x * 2.5 + ((uTime * (PI / 3.1254)) * 0.037))) * 0.005;
 
       position.x -= x;
       position.y -= y;
@@ -80,7 +80,7 @@ function BasicPlane() {
         heightSegments={9}
         onRender={onRender}
       >
-          <img src="/Udsnit_ByMickleit.jpg" alt="" data-sampler="planeTexture" crossOrigin='anonymous'/>
+          <img src="/os.jpg" alt="" data-sampler="planeTexture" crossOrigin='anonymous'/>
       </Plane>
     </Curtains>
   );

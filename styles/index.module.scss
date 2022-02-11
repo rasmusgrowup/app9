@@ -1,7 +1,7 @@
 @import 'sizes.scss';
 
 .heroWrapper {
-  height: 90vh;
+  height: 86vh;
   position: relative;
   width: 100%;
 
@@ -33,7 +33,7 @@
   left: 50%;
   line-height: 1;
   overflow: hidden;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -53,13 +53,13 @@
 }
 
 .videoWrapper {
-  height: 52vh;
+  height: 60vh;
   left: 50%;
   position: relative;
   pointer-events: none;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 72vw;
+  width: 79vw;
   z-index: 1;
 
   @media (min-width: $s) {
@@ -68,18 +68,18 @@
   }
 
   @media (min-width: $l) {
-    height: 44vw;
-    width: 30vw;
+    height: 50vw;
+    width: 34vw;
   }
 }
 
 .planeWrapper {
-  height: 90vh;
+  height: 86vh;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 1;
 
   @media (min-width: $l) {
     height: 62vw;

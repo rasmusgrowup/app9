@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import css from '../styles/header.module.scss'
 import Smile from '../public/smile.svg'
 
@@ -20,10 +21,12 @@ export default function Logo({ down }) {
   return (
     <>
       <div className={css.logoWrapper} ref={ref}>
+        <Link href='/'><a>
         <div className={`${css.logoInner} ${down == true ? `${css.hideLogo}` : ''}`} down={down}>
           <span>Growup Studio <Image src={Smile} width='12' height='12' alt='Growup Studio Favicon'/></span>
           <span>Branding + Webdesign</span>
         </div>
+        </a></Link>
       </div>
     </>
   )

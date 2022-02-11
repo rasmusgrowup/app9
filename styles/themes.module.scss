@@ -1,0 +1,16 @@
+@import 'sizes.scss';
+
+.mainTheme {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.greyTheme {
+  background-color: var(--greyTheme);
+  color: var(--black);
+}
+
+.sandTheme {
+  background-color: var(--white);
+  color: var(--black);
+}
